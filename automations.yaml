@@ -1,0 +1,83 @@
+- alias: 'Set theme at startup'
+  trigger:
+    platform: homeassistant
+    event: start
+  action:
+    service: frontend.set_theme
+    data:
+      name: dark
+- id: '1570906843822'
+  alias: Baggang udsugning tænd
+  description: Tænd udsugning i baggangen
+  trigger:
+  - above: '49'
+    entity_id: sensor.baggang_humidity
+    platform: numeric_state
+  condition: []
+  action:
+  - alias: ''
+    data: {}
+    entity_id: fan.baggang_fan
+    service: fan.turn_on
+- id: '1570906914282'
+  alias: Baggang udsugning sluk
+  description: Sluk udsugning i baggang.
+  trigger:
+  - below: '45'
+    entity_id: sensor.baggang_humidity
+    platform: numeric_state
+  condition: []
+  action:
+  - entity_id: fan.baggang_fan
+    service: fan.turn_off
+- alias: Perform Daily Backup
+  trigger:
+  - platform: time
+    at: 00:00:00
+  action:
+  - service: auto_backup.snapshot_full
+    data_template:
+      name: 'DailyBackup: {{ now().strftime(''%A, %B %-d, %Y'') }}'
+      keep_days: 7
+  id: 04fc2a8380de44059375f07665633979
+- id: '1578155648312'
+  alias: Køkken UpLys Tænd Aften
+  description: Tænd UpLys i køkken 30 min før solnedgang
+  trigger:
+  - event: sunset
+    offset: -00:05:00
+    platform: sun
+  condition: []
+  action:
+  - entity_id: light.sw_kitchen_uplight
+    service: light.turn_on
+- id: '1578155764412'
+  alias: Køkken UpLys Sluk For Nat
+  description: Sluk køkken UpLys for natten
+  trigger:
+  - at: 00:30:00
+    platform: time
+  condition: []
+  action:
+  - entity_id: light.sw_kitchen_uplight
+    service: light.turn_off
+- id: '1578176725993'
+  alias: Køkken UpLys Tænd Morgen
+  description: Tænd UpLys i køkken kl 04.00
+  trigger:
+  - at: 04:00:00
+    platform: time
+  condition: []
+  action:
+  - entity_id: light.sw_kitchen_uplight
+    service: light.turn_on
+- id: '1578176817126'
+  alias: Køkken UpLys Sluk For Dag
+  description: Sluk køkken UpLys for dagen
+  trigger:
+  - event: sunrise
+    platform: sun
+  condition: []
+  action:
+  - entity_id: light.sw_kitchen_uplight
+    service: light.turn_off

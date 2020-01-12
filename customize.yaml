@@ -1,0 +1,10 @@
+sensor.baggang_humidity:
+  friendly_name: Fugtighed
+sensor.baggang_temperature:
+  friendly_name: Temperatur
+fan.baggang_fan:
+  friendly_name: Udsugning
+sensor.cristian_temperature:
+  friendly_name: Temperatur
+sensor.cristian_humidity:
+  friendly_name: Fugtighed

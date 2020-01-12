@@ -1,0 +1,16 @@
+{
+    "name": "node-red-project",
+    "description": "A Node-RED Project",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "@fetchbot/node-red-contrib-ikea-home-smart": "~0.2.4",
+        "node-red-contrib-eztimer": "~1.1.5",
+        "node-red-contrib-home-assistant-websocket": "~0.18.0",
+        "node-red-contrib-huemagic": "~2.2.3",
+        "node-red-contrib-sacn": "0.0.7",
+        "node-red-contrib-simpletime": "~2.8.0",
+        "node-red-contrib-sun-position": "~0.5.4",
+        "node-red-node-pi-neopixel": "0.0.25"
+    }
+}
