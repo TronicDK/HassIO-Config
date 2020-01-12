@@ -1,0 +1,28 @@
+# lights Group #
+
+Night_light:
+  name: Natlys
+  entities:
+    - light.sw_kitchen_uplight
+
+Ude_dore:
+  name: Ude lys Hus
+  entities:
+    - light.fordor_ude_op
+    - light.fordor_ude_ned
+    - light.bagdor_ude_op
+    - light.bagdor_ude_ned
+
+Fkk_all_light:
+  name: fkk lys
+  entities:
+    - light.loft_frederrikke_1
+    - light.loft_frederrikke_2
+    - light.loft_frederrikke_3
+
+Chk_all_light:
+  name: chk lys
+  entities:
+    - light.loft_cristian_1
+    - light.loft_cristian_2
+    - light.color_temperature_light_1

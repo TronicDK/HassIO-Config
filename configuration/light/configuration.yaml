@@ -1,0 +1,8 @@
+# Speaker for Wifi and Bluetooth #
+
+media_player:
+  - platform: bluesound
+    hosts:
+      - host: 192.168.1.150
+        name: Køkken Radio
+        port: 11000

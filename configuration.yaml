@@ -1,3 +1,8 @@
+default_config:
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+
 frontend:
   themes: !include themes.yaml
 
@@ -11,11 +16,6 @@ nordpool:
 
 homekit:
   pincode: 220-97-419
-
-default_config:
-group: !include groups.yaml
-automation: !include automations.yaml
-script: !include scripts.yaml
 
 # Text to speech
 tts:
