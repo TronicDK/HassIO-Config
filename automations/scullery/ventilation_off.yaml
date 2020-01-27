@@ -1,0 +1,24 @@
+#
+# Turn off ventilation i scullery when humidity is below 45% and temp below 25
+#
+id: '1570906914282'
+alias: ventilation_turn_off_humidity_and_temp
+trigger:
+- entity_id: sensor.baggang_humidity
+  platform: numeric_state
+  below: '45'
+- entity_id: sensor.scullery_temperature
+  platform: numeric_state
+  above: '26'
+condition:
+  condition: and
+  conditions:
+    - condition: numeric_state
+      entity_id: sensor.baggang_humidity
+      below: '45'
+    - condition: numeric_state
+      entity_id: sensor.scullery_temperature
+      above: '26'
+action:
+- entity_id: fan.scullery_ventilation
+  service: fan.turn_off

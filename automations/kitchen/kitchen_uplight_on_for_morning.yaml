@@ -1,0 +1,13 @@
+#
+# Turn kitchen uplight on at the morning.
+#
+
+id: '1578176725993'
+alias: kitchen_uplight_on_for_morning
+trigger:
+- platform: time
+  at: 04:00:00
+condition: []
+action:
+- entity_id: light.sw_kitchen_uplight
+  service: light.turn_on

@@ -1,0 +1,16 @@
+#
+# Turn on ventilation i scullery when humidity is above 48% or temp above 27
+#
+
+id: '1570906843822'
+alias: ventilation_turn_on_humidity_or_temp
+trigger:
+  - entity_id: sensor.scullery_humidity
+    platform: numeric_state
+    above: '49'
+  - entity_id: sensor.scullery_temperature
+    platform: numeric_state
+    above: '29'
+action:
+  - entity_id: fan.scullery_ventilation
+    service: fan.turn_on

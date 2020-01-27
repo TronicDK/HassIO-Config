@@ -1,0 +1,13 @@
+#
+# Turn uplight in corridor off at sunrise
+#
+
+id: '1580044431367'
+alias: corridor_uplight_off_sunrise
+trigger:
+- platform: sun
+  event: sunrise
+action:
+  service: light.turn_off
+  data:
+    entity_id: light.wled

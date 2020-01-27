@@ -1,0 +1,17 @@
+#
+# Turn off outdoor doors light at sunrise
+#
+
+id: '1579473167795'
+alias: light_outdoor_doors_off_sunrise
+trigger:
+- platform: sun
+  event: sunrise
+condition: []
+action:
+- entity_id:
+  - light.bagdor_op
+  - light.fordor_op
+  - light.bagdor_ned
+  - light.fordor_ned
+  service: light.turn_off

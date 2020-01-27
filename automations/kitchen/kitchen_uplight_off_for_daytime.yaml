@@ -1,0 +1,13 @@
+#
+# Turn kitchen uplight off for the daytime
+#
+
+id: '1578176817126'
+alias: kitchen_uplight_off_for_daytime
+trigger:
+- platform: sun
+  event: sunrise
+condition: []
+action:
+- entity_id: light.sw_kitchen_uplight
+  service: light.turn_off

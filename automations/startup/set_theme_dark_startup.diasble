@@ -1,0 +1,13 @@
+#
+# Set the theme at start up
+#
+
+alias: set_theme_dark_startup
+trigger:
+  platform: homeassistant
+  event: start
+action:
+  service: frontend.set_theme
+  data:
+    name: dark
+id: 5b87018e7f8641bf8b67e1a94cca9e6a

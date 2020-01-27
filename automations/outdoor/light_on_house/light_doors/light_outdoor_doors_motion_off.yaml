@@ -1,0 +1,27 @@
+#
+# Then no motion is detected turn outdoors doors light back to dimmed
+#
+
+id: '1579476076436'
+alias: light_outdoor_doors_motion_off
+trigger:
+  platform: state
+  entity_id: binary_sensor.tradfri_motion_sensor
+  from: 'on'
+  to: 'off'
+  for:
+    minutes: 1
+condition: []
+action:
+- data:
+    brightness_pct: 10
+  entity_id:
+  - light.bagdor_op
+  - light.fordor_op
+  service: light.turn_on
+- data:
+    brightness_pct: 40
+  entity_id:
+  - light.bagdor_ned
+  - light.fordor_ned
+  service: light.turn_on

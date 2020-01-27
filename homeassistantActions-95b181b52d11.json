@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "homeassistantactions-65044",
+  "private_key_id": "95b181b52d117628574e08314be007b932a6fd26",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDPtta+Sjzszow0\ngHbmbzmrAdi1uBsR00xruOP9RzA7H1gcaVr3r90xx0rYGViUxsCdZ3F0Wokmu2iN\nB/OBNiJIr8m/Fylwe2bs0DC14ravVkZIwnf4ZFMUEJBJJbJhnghRebRxqP3yOtm0\nhd71E3Wb2yM2xVG2d4uQMRPQ/pLUyElPn7KvsUGQX5l6J6l3Cow7jed2jFAcgBnh\nxSkp9XDpgyIQKjV1UpPm8Ml7M5ECgqAzWQr0ajV68YdIz33i7N4YeHicp/MnNdIa\n7bWrgFDwiXIAPkNYF8wQyFPWtd/OB+J2+jER3i50hCY2Km5AutI6qaB/P/kuXIlQ\nSICCO/ilAgMBAAECggEAH69HUJ2ob4MOVg/mkz4SMOjGMuoTjwOJW8FHXeJXFB2y\n5hqYGsJD3o0E+LPdFEzBIwGdh98rnrHlv+Wfmm00i5vtDW4uDw9z4tnbJFOiBFsH\nu5+Wh1heZ+gi6lWKwWNG547GHLRnkGSzwtrM6NuADDdARuGQlmHj8ynZWP8MTNK9\nz1DmKyNhE62Y8w22LpVXjCLhAoZ147oQEmlVrkQw+Md38AiD0vz63At+NfrAVfT9\n4RfOXJVkOYdtV8O5F3d8fAUMMhdtlGGLpH6aTsbY6jrb/Op4JaqpH7F6A/b87rwG\noXnFsNFyZa1cfRi4XdDB6rxd+DsxsdXjsDwNcEBAvQKBgQD+8tfVxwMV5gce/s6/\n6Zyw5lhJhfCCF/ArAWvN7Tw20rFquA3a72o4ysOG2urflbk2gyS8J7L0ypoiTrjk\nLgHF2ZJbXMAlTkhf3GUJQbqMNfTNff80bcBQXm6UAXR4qMJOa2oWmIuXsrVSVajs\nDaw8cMrBamryIaW3JFtTy+r1xwKBgQDQkiEENzsO+7w0TNOrZSKD/5eQBklJQ0bU\nDY/SUrlMMcxlpJBPEEVd7SBff92X+nc3ZIQdhUBIyGvo03HRk+u8dG5Q5ZI7TKvJ\nnd1wopeN87eXbdNGH0CLSF7g2wrwINEumazbSN6OEqhVxeTn37NnK4Fio2lZYKqx\n9DX1xqLuMwKBgQDZ/gEJHKqJve8W1J8pv3GoXLze2PTF9/v2ebeZE6Fp6wuiiY/n\nRNFZkB5Rn7w2w0njz4zIiVVeNCJI9XDoQmJnrtqS3iK5g08lEEkf+iCtJLGWR4bA\naJuI3MXGLdxOE1ZZQUUr3vF1G2wo42+Vrzc3UuY7LWgWcyjECQVCCFl2HwKBgQCi\n4tyiHDglVXgAKFfOrSctizjko+QsMTxpc0X07eIEnYeRgdmpxX1HA1+a9ZMrk9Hz\nEq8TFvPDY7LSm/9xu2IJRay5xPBVG2W2CXHc+z39AG9K9dxgERwpKpXeaXK7YgW7\nrQyQHPKiZfPNOMWySMQlOJbNX+1wfcwROjXCAiVQfQKBgG5CBG2O1l/h+P6vg61B\nAbFQuTDtNpOVdry+XboxoBUUGMxqRBiF3z1u94z4Cph9O7i4pKF9BzfHAiSDIq+8\nfL9HuRF9Ee4JAfi29ukAedg63DvGgdxiaMhC7FoJTEKpko//aaqNpduEDDrRoVjt\nOIGfdai6nsRbprUHVjuheBGb\n-----END PRIVATE KEY-----\n",
+  "client_email": "hassiogooglehome@homeassistantactions-65044.iam.gserviceaccount.com",
+  "client_id": "109785757095343215894",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/hassiogooglehome%40homeassistantactions-65044.iam.gserviceaccount.com"
+}

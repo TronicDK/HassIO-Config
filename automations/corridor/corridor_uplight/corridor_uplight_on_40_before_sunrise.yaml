@@ -1,0 +1,15 @@
+#
+# Turn uplight in corridor on at 04:30 clock at 40% and kelvin 3200
+#
+
+id: '1580044243992'
+alias: corridor_uplight_on_40_before_sunrise
+trigger:
+- platform: time
+  at: 04:30:00
+action:
+  service: light.turn_on
+  data:
+    entity_id: light.wled
+    brightness_pct: 40
+    kelvin: 3200

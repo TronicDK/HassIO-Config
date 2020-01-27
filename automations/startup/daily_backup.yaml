@@ -1,0 +1,14 @@
+#
+# Make a daily backup
+#
+
+alias: perform_daily_backup
+trigger:
+- platform: time
+  at: 00:00:00
+action:
+- service: auto_backup.snapshot_full
+  data_template:
+    name: 'DailyBackup: {{ now().strftime(''%A, %B %-d, %Y'') }}'
+    keep_days: 7
+id: 04fc2a8380de44059375f07665633979

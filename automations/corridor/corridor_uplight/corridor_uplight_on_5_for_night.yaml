@@ -1,0 +1,15 @@
+#
+# Turn light in corridor on at 5% and kelvin 3000 for the night.
+#
+
+id: '1580043597584'
+alias: corridor_uplight_on_5_for_night
+trigger:
+- platform: time
+  at: '23:00:00'
+action:
+  service: light.turn_on
+  data:
+    entity_id: light.wled
+    brightness_pct: 5
+    kelvin: 2800

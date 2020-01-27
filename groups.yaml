@@ -3,24 +3,63 @@ Night_light:
   entities:
     - light.sw_kitchen_uplight
 
-Ude_dore:
+Light_Out_All_Dore:
   name: Ude lys Hus
   entities:
-    - light.fordor_ude_op
-    - light.fordor_ude_ned
-    - light.bagdor_ude_op
-    - light.bagdor_ude_ned
+    - light.bagdor_ned
+    - light.bagdor_op
+    - light.fordor_ned
+    - light.fordor_op
 
-Fkk_all_light:
+Light_Out_Up_Dore:
+  name: Ude lys Hus op
+  entities:
+    - light.bagdor_op
+    - light.fordor_op
+
+Light_Out_Down_Dore:
+  name: Ude lys Hus ned
+  entities:
+    - light.bagdor_ned
+    - light.fordor_ned
+
+Light_Fkk_All:
+  name: fkk alt lys
+  entities:
+    - light.frederrikke_loft_1
+    - light.frederrikke_loft_2
+    - light.frederrikke_loft_3
+    - light.pendel_2
+    - light.pendel_1
+    - light.frederrikke_light_ledstrip
+
+Light_Fkk_All_Ceiling:
+  name: fkk loft lys
+  entities:
+    - light.frederrikke_loft_1
+    - light.frederrikke_loft_2
+    - light.frederrikke_loft_3
+
+Light_Fkk_Heater_Led_Light:
+  name: RadiatorSkjuler Led-Lys
+  entities:
+    - light.frederrikke_light_ledstrip
+
+Light_Fkk_All_Pendel:
   name: fkk lys
   entities:
-    - light.loft_frederrikke_1
-    - light.loft_frederrikke_2
-    - light.loft_frederrikke_3
+    - light.pendel_2
+    - light.pendel_1
 
-Chk_all_light:
-  name: chk lys
+Light_Chk_all:
+  name: chk akt lys
   entities:
-    - light.loft_cristian_1
-    - light.loft_cristian_2
-    - light.color_temperature_light_1
+    - light.cristian_loft_1
+    - light.cristian_loft_2
+    - light.vaegspot_cristian
+
+Light_Chk_All_Ceiling:
+  name: chk loft lys
+  entities:
+    - light.cristian_loft_1
+    - light.cristian_loft_2

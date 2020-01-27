@@ -1,0 +1,14 @@
+#
+# Turn on kitchen upLight 30 min before sunset.
+#
+
+id: '1578155648312'
+alias: kitchen_uplight_on_at_sunset
+trigger:
+- platform: sun
+  event: sunset
+  offset: -00:30:00
+condition: []
+action:
+- entity_id: light.sw_kitchen_uplight
+  service: light.turn_on

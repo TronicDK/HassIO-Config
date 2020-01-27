@@ -1,0 +1,25 @@
+#
+# Turn the outdoors light at the doors on at sunset.
+# Lights are dimmed
+#
+
+id: '1579442977349'
+alias: light_outdoor_doors_on_sunset
+trigger:
+- platform: sun
+  event: sunset
+  offset: '01:00:00'
+condition: []
+action:
+- data:
+    brightness_pct: 10
+  entity_id:
+  - light.bagdor_op
+  - light.fordor_op
+  service: light.turn_on
+- data:
+    brightness_pct: 40
+  entity_id:
+  - light.bagdor_ned
+  - light.fordor_ned
+  service: light.turn_on

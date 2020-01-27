@@ -1,0 +1,25 @@
+#
+# Then motion is detected turn outdoors doors light to 100%
+#
+#
+id: '1579472153233'
+alias: light_outdoor_doors_motion_detected
+trigger:
+  platform: state
+  entity_id: binary_sensor.tradfri_motion_sensor
+  to: 'on'
+action:
+- condition: or
+  conditions:
+  - condition: sun
+    after: sunset
+  - condition: sun
+    before: sunrise
+- data:
+    brightness_pct: 95
+  entity_id:
+  - light.bagdor_op
+  - light.fordor_op
+  - light.bagdor_ned
+  - light.fordor_ned
+  service: light.turn_on

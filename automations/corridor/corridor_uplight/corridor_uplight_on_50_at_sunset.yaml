@@ -1,0 +1,20 @@
+#
+# Turn light in corridor on at sunset at 50% and kelvin 3700
+#
+
+id: '1580042406136'
+alias: corridor_uplight_on_50_at_sunset
+trigger:
+- platform: sun
+  event: sunset
+  offset: 00:00:00
+condition:
+  condition: time
+  after: '15:00:00'
+  before: '23:30:00'
+action:
+  service: light.turn_on
+  data:
+    entity_id: light.wled
+    brightness_pct: 50
+    kelvin: 4500

@@ -1,0 +1,24 @@
+# light #
+light:
+  - platform: mqtt
+    name: "SW_kitchen-uplight"
+    command_topic: "cmnd/SW_kitchen-uplight/power"
+    state_topic: "stat/SW_kitchen-uplight/POWER"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true
+
+  - platform: mqtt
+    name: "Cristian_light-ps4controller"
+    command_topic: "cmnd/Cristian_light-ps4controller/power"
+    state_topic: "stat/Cristian_light-ps4controller/POWER"
+    rgb_state_topic: "stat/Cristian_light-ps4controller/color"
+    rgb_command_topic: "cmnd/Cristian_light-ps4controller/color"
+    brightness_state_topic: "stat/Cristian_light-ps4controller/dimmer"
+    brightness_command_topic: "cmnd/Cristian_light-ps4controller/dimmer"
+    brightness_value_template: "{{ value_json.Dimmer }}"
+    brightness_scale: 100
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true

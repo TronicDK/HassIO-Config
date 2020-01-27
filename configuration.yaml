@@ -1,21 +1,28 @@
 default_config:
 group: !include groups.yaml
-automation: !include automations.yaml
+# automation: !include automations.yaml
 script: !include scripts.yaml
 
 frontend:
-  themes: !include themes.yaml
-
+#  themes: !include themes.yaml
+  themes: !include_dir_merge_named themes
 homeassistant:
+  packages: !include_dir_named integrations
   customize: !include customize.yaml
 
 discovery:
 
-circadian_lighting:
-nordpool:
+google_assistant:
+  project_id: homeassistantactions-65044
+  service_account: !include homeassistantActions-95b181b52d11.json
+  report_state: true
+  exposed_domains:
+    - switch
+    - light
 
+nordpool:
 homekit:
-  pincode: 220-97-419
+  pincode: 727-07-815
 
 # Text to speech
 tts:
@@ -24,15 +31,21 @@ tts:
 auto_backup:
   auto_purge: true
 
+panel_iframe:
+  ide:
+    title: IDE
+    icon: mdi:code-braces
+    url: https://kristiansen.duckdns.org:8321
+
 #tradfri:
 #  host: 192.168.1.15
 #  allow_tradfri_groups: true
 
-hue:
-  bridges:
-    - host: 192.168.1.150
-      allow_unreachable: true
-      allow_hue_groups: true
+#hue:
+#  bridges:
+#    - host: 192.168.1.150
+#      allow_unreachable: true
+#      allow_hue_groups: true
 
 hacs:
   token: !secret hacs_token
@@ -63,7 +76,7 @@ device_tracker:
 
 fan:
   - platform: mqtt
-    name: "Baggang-fan"
+    name: "scullery_ventilation"
     state_topic: "stat/baggang-Temperature-Humidity/POWER"
     command_topic: "cmnd/baggang-Temperature-Humidity/power"
     qos: 1
@@ -71,6 +84,47 @@ fan:
     payload_off: "OFF"
     retain: true
 
+# light #
+light:
+  - platform: mqtt
+    name: "SW_kitchen-uplight"
+    command_topic: "cmnd/SW_kitchen-uplight/power"
+    state_topic: "stat/SW_kitchen-uplight/POWER"
+    availability_topic: "tele/SW_kitchen-uplight/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: 'Online'
+    payload_not_available: 'Offline'
+    retain: false
+
+  - platform: mqtt
+    name: "Frederrikke_Light_LedStrip"
+    command_topic: "cmnd/SW_Light-Frederrikke_Led_strip/power"
+    state_topic: "stat/SW_Light-Frederrikke_Led_strip/POWER"
+    availability_topic: "tele/SW_Light-Frederrikke_Led_strip/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: 'Online'
+    payload_not_available: 'Offline'
+    retain: false
+
+  - platform: mqtt
+    name: "Cristian_light-ps4controller"
+    command_topic: "cmnd/Cristian_light-ps4controller/power"
+    state_topic: "stat/Cristian_light-ps4controller/POWER"
+    rgb_state_topic: "stat/Cristian_light-ps4controller/color"
+    rgb_command_topic: "cmnd/Cristian_light-ps4controller/color"
+    brightness_state_topic: "stat/Cristian_light-ps4controller/dimmer"
+    brightness_command_topic: "cmnd/Cristian_light-ps4controller/dimmer"
+    brightness_value_template: "{{ value_json.Dimmer }}"
+    brightness_scale: 100
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true
+
+# Sensors #
 sensor:
   - platform: mqtt
     state_topic: "tele/Cristian_light-ps4controller/SENSOR"
@@ -92,7 +146,7 @@ sensor:
 
   - platform: mqtt
     state_topic: "tele/baggang-Temperature-Humidity/SENSOR"
-    name: "baggang-Temperature"
+    name: "scullery-temperature"
     icon: 'mdi:thermometer'
     unit_of_measurement: '°C'
     value_template: "{{ value_json.AM2301.Temperature }}"
@@ -101,41 +155,30 @@ sensor:
 
   - platform: mqtt
     state_topic: "tele/baggang-Temperature-Humidity/SENSOR"
-    name: "baggang-Humidity"
+    name: "scullery-humidity"
     icon: 'mdi:water-percent'
     value_template: "{{ value_json.AM2301.Humidity }}"
     unit_of_measurement: '%'
     payload_available: "Online"
     payload_not_available: "Offline"
 
+  - platform: mqtt
+    state_topic: "tele/SW_Light-Frederrikke_Led_strip/SENSOR"
+    name: "Frederrikke-Temperature"
+    icon: 'mdi:thermometer'
+    unit_of_measurement: '°C'
+    value_template: "{{ value_json.DHT11.Temperature }}"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+
+  - platform: mqtt
+    state_topic: "tele/SW_Light-Frederrikke_Led_strip/SENSOR"
+    name: "Frederrikke-Humidity"
+    icon: 'mdi:water-percent'
+    value_template: "{{ value_json.DHT11.Humidity }}"
+    unit_of_measurement: '%'
+    payload_available: "Online"
+    payload_not_available: "Offline"
+
   - platform: nordpool
     region: "DK1" # This can be skipped if you want Kr.sand
-
-light:
-  - platform: mqtt
-    name: "SW_kitchen-uplight"
-    command_topic: "cmnd/SW_kitchen-uplight/power"
-    state_topic: "stat/SW_kitchen-uplight/POWER"
-    qos: 1
-    payload_on: "ON"
-    payload_off: "OFF"
-    retain: true
-
-  - platform: mqtt
-    name: "Cristian_light-ps4controller"
-    command_topic: "cmnd/Cristian_light-ps4controller/power"
-    state_topic: "stat/Cristian_light-ps4controller/POWER"
-    rgb_state_topic: "stat/Cristian_light-ps4controller/color"
-    rgb_command_topic: "cmnd/Cristian_light-ps4controller/color"
-    brightness_state_topic: "stat/Cristian_light-ps4controller/dimmer"
-    brightness_command_topic: "cmnd/Cristian_light-ps4controller/dimmer"
-    brightness_value_template: "{{ value_json.Dimmer }}"
-    brightness_scale: 100
-    payload_on: "ON"
-    payload_off: "OFF"
-    retain: true
-
-switch:
-  - platform: circadian_lighting
-    lights_ct:
-      - light.tradfri_bulb_6_2

@@ -1,0 +1,17 @@
+#
+# Turn light in corridor on an 1h before sunset at 25% and kelvin 3700
+#
+
+id: '1580041721395'
+alias: corridor_uplight_on_25_before_sunset
+trigger:
+- event: sunset
+  offset: '-01:00:00'
+  platform: sun
+condition: []
+action:
+  service: light.turn_on
+  data:
+    entity_id: light.wled
+    brightness_pct: 25
+    kelvin: 5000
