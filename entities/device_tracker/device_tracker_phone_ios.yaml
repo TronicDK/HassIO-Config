@@ -1,0 +1,12 @@
+#
+# Tracking the phones on IOS
+#
+
+platform: iphonedetect
+consider_home: 60
+interval_seconds: 2
+hosts:
+  Rut: 192.168.1.200
+  Casper: 192.168.1.205
+  Cristian: 192.168.1.210
+  Frederrikke: 192.168.1.215

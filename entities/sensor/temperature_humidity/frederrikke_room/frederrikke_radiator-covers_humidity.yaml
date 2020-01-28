@@ -1,0 +1,12 @@
+# 
+# Frederrikke room, DHT11 Humidity sensor on Sonoff in radiator-covers
+# 
+
+platform: mqtt
+state_topic: "tele/SW_Light-Frederrikke_Led_strip/SENSOR"
+name: "Frederrikke-Humidity"
+icon: 'mdi:water-percent'
+value_template: "{{ value_json.DHT11.Humidity }}"
+unit_of_measurement: '%'
+payload_available: "Online"
+payload_not_available: "Offline"

@@ -1,0 +1,7 @@
+#
+# IKEA tradfri
+#
+
+tradfri:
+  host: 192.168.1.15
+  allow_tradfri_groups: true

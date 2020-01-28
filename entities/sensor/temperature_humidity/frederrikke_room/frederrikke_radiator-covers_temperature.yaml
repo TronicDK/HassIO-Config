@@ -1,0 +1,12 @@
+# 
+# Frederrikke room, DHT11 Temperature sensor on Sonoff in radiator-covers
+# 
+
+platform: mqtt
+state_topic: "tele/SW_Light-Frederrikke_Led_strip/SENSOR"
+name: "Frederrikke-Temperature"
+icon: 'mdi:thermometer'
+unit_of_measurement: '°C'
+value_template: "{{ value_json.DHT11.Temperature }}"
+payload_available: "Online"
+payload_not_available: "Offline"

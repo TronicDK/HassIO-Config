@@ -1,0 +1,12 @@
+#
+# scullery ventilation fan
+#
+
+platform: mqtt
+name: "scullery_ventilation"
+state_topic: "stat/baggang-Temperature-Humidity/POWER"
+command_topic: "cmnd/baggang-Temperature-Humidity/power"
+qos: 1
+payload_on: "ON"
+payload_off: "OFF"
+retain: true

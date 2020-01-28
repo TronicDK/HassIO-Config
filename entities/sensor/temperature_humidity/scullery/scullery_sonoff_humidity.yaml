@@ -1,0 +1,12 @@
+# 
+# Scullery room, AM2301 Humidity sensor in sonoff for fan control
+# 
+
+platform: mqtt
+state_topic: "tele/baggang-Temperature-Humidity/SENSOR"
+name: "scullery-humidity"
+icon: 'mdi:water-percent'
+value_template: "{{ value_json.AM2301.Humidity }}"
+unit_of_measurement: '%'
+payload_available: "Online"
+payload_not_available: "Offline"

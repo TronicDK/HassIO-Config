@@ -1,0 +1,12 @@
+#
+# scullery ventilation fan
+#
+
+sensor.scullery_humidity:
+  friendly_name: Fugtighed
+
+sensor.scullery_temperature:
+  friendly_name: Temperatur
+
+fan.scullery_ventilation:
+  friendly_name: Udsugning

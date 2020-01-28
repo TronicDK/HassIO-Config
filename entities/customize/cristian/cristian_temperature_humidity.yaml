@@ -1,0 +1,11 @@
+# 
+# Cristians room, DHT11 Humidity & temperature sensor in ps4controller stand
+# 
+sensor.cristian_temperature:
+  friendly_name: Temperatur
+
+sensor.cristian_humidity:
+  friendly_name: Fugtighed
+
+sensor.remote_control_cristian_battery_level:
+  friendly_name: Bat.Remote loft-lys

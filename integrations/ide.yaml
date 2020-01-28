@@ -1,0 +1,9 @@
+#
+# Advanced IDE for Home Assistant, based on Cloud9 IDE
+#
+
+panel_iframe:
+  ide:
+    title: IDE
+    icon: mdi:code-braces
+    url: https://kristiansen.duckdns.org:8321

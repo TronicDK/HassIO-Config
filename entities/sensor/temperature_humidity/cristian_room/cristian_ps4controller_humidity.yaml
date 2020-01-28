@@ -1,0 +1,12 @@
+# 
+# Cristians room, DHT11 Humidity sensor in ps4controller stand
+# 
+
+platform: mqtt
+state_topic: "tele/Cristian_light-ps4controller/SENSOR"
+name: "Cristian-Humidity"
+icon: 'mdi:water-percent'
+value_template: "{{ value_json.DHT11.Humidity }}"
+unit_of_measurement: '%'
+payload_available: "Online"
+payload_not_available: "Offline"

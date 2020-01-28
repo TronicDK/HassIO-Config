@@ -1,0 +1,1 @@
+media_player split: !include_dir_list ../entities/media_player
