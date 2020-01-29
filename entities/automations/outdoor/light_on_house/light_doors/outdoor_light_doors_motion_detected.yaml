@@ -7,6 +7,7 @@ alias: light_outdoor_doors_motion_detected
 trigger:
   platform: state
   entity_id: binary_sensor.tradfri_motion_sensor
+  from: 'off'
   to: 'on'
 action:
 - condition: or

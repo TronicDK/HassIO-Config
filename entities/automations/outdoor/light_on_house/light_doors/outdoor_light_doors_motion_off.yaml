@@ -13,6 +13,12 @@ trigger:
     minutes: 1
 condition: []
 action:
+- condition: or
+  conditions:
+  - condition: sun
+    after: sunset
+  - condition: sun
+    before: sunrise
 - data:
     brightness_pct: 10
   entity_id:

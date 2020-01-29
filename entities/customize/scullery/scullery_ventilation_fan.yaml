@@ -3,10 +3,10 @@
 #
 
 sensor.scullery_humidity:
-  friendly_name: Fugtighed
+friendly_name: Fugtighed
 
 sensor.scullery_temperature:
-  friendly_name: Temperatur
+friendly_name: Temperatur
 
 fan.scullery_ventilation:
-  friendly_name: Udsugning
+friendly_name: Udsugning

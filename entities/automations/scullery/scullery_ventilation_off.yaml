@@ -11,7 +11,7 @@ trigger:
   platform: numeric_state
   above: '26'
 condition:
-  condition: and
+  condition: or
   conditions:
     - condition: numeric_state
       entity_id: sensor.baggang_humidity
