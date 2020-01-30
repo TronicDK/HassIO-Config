@@ -52,7 +52,7 @@ Light_Fkk_All_Pendel:
     - light.pendel_1
 
 Light_Chk_all:
-  name: chk akt lys
+  name: chk alt lys
   entities:
     - light.cristian_loft_1
     - light.cristian_loft_2

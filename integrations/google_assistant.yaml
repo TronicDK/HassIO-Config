@@ -5,3 +5,8 @@ google_assistant:
   exposed_domains:
     - switch
     - light
+    - sensor
+    - groups
+    - cover
+    - scene
+  expose_by_default: true
