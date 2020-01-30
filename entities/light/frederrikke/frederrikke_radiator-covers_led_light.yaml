@@ -3,10 +3,10 @@
 #
 
 platform: mqtt
-name: "SW_kitchen-uplight"
-command_topic: "cmnd/SW_kitchen-uplight/power"
-state_topic: "stat/SW_kitchen-uplight/POWER"
-availability_topic: "tele/SW_kitchen-uplight/LWT"
+name: "frederrikke_radiator-covers_led_light"
+command_topic: "cmnd/SW_Light-Frederrikke_Led_strip/power"
+state_topic: "stat/SW_Light-Frederrikke_Led_strip/POWER"
+availability_topic: "tele/SW_Light-Frederrikke_Led_strip/LWT"
 qos: 1
 payload_on: "ON"
 payload_off: "OFF"

@@ -31,7 +31,7 @@ Light_Fkk_All:
     - light.frederrikke_loft_3
     - light.pendel_2
     - light.pendel_1
-    - light.frederrikke_light_ledstrip
+    - light.frederrikke_radiator_covers_led_light
 
 Light_Fkk_All_Ceiling:
   name: fkk loft lys
@@ -43,7 +43,7 @@ Light_Fkk_All_Ceiling:
 Light_Fkk_Heater_Led_Light:
   name: RadiatorSkjuler Led-Lys
   entities:
-    - light.frederrikke_light_ledstrip
+    - light.frederrikke_radiator_covers_led_light
 
 Light_Fkk_All_Pendel:
   name: fkk lys
