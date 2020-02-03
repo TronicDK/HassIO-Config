@@ -1,0 +1,6 @@
+platform: spotify
+client_id: casper@famkristiansen.dk
+client_secret: fbbjjkak
+aliases:
+  abc123def456: 'Living Room'
+  9183abas000: 'Bed Room'

@@ -1,2 +1,2 @@
 homeassistant:
-  customize: !include_dir_list ../entities/customize
+  customize split: !include_dir_list ../entities/customize/

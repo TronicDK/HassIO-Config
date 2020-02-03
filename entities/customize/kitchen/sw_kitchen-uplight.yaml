@@ -1,0 +1,5 @@
+# 
+# Kitchen friendly
+# 
+light.sw_kitchen_uplight:
+  friendly_name: up-lys
