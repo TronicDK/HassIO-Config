@@ -3,13 +3,15 @@
 <p>I use a "light" Frenck inspired packages configutation.</p>
 
 <h3>Hardware</h3>
-<p>Raspberry Pi 3<br/>
+<p>
+Bluesound PULSE FLEX 2i<br/>
 Chromecast x2<br/>
 ConBee II<br/>
 Google Home Mini<br/>
-Google Nest Mini<br/>
+Google Nest Mini<br/>  
 <s>Ikea Tradfri gateway</s>(not in use)<br/>
 <s>Philips Hue Bridge</s>(not in use)<br/>
+Raspberry Pi 3<br/>
 Sonoff RF bridge (Tasmota 8.1.0)<br />
 </p>
 
